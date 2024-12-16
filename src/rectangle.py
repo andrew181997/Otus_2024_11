@@ -5,7 +5,6 @@ class Rectangle(Figure):
     def __init__(self, side_a, side_b):
         self.side_a = side_a
         self.side_b = side_b
-        super(Rectangle, self).__init__()
         self.validate_numeric(self.side_a, self.side_b)
 
     @property

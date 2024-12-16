@@ -7,7 +7,6 @@ class Triangle(Figure):
         self.side_a = side_a
         self.side_b = side_b
         self.side_c = side_c
-        super(Triangle, self).__init__()
         self.validate_numeric(self.side_a, self.side_b, self.side_c)
         if not (
             self.side_a + self.side_b > self.side_c
@@ -25,3 +24,5 @@ class Triangle(Figure):
     @property
     def get_perimeter(self):
         return self.side_a + self.side_b + self.side_c
+
+

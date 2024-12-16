@@ -7,7 +7,6 @@ NUM_P = 3.14159
 class Circle(Figure):
     def __init__(self, radius):
         self.radius = radius
-        super(Circle, self).__init__()
         self.validate_numeric(self.radius)
 
     @property

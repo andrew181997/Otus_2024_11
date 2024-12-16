@@ -11,8 +11,8 @@ class Figure(ABC):
     @abstractmethod
     def get_area(self):
         pass
-
-    def validate_numeric(self, *args):
+    @staticmethod
+    def validate_numeric(*args):
         """Метод для проверки, что параметры являются валидными."""
         for arg in args:
             if not isinstance(arg, (int, float)):
