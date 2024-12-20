@@ -25,7 +25,28 @@ def test_perimeter_square(side_a):
     assert a.get_perimeter == pytest.approx(expected_perimeter)
 
 
-@pytest.mark.parametrize("side", [-1, 0, -10, "string", None])
-def test_square_area_negative(side_a):
-    with pytest.raises((ValueError)):
-        Square(side_a)
+@pytest.mark.parametrize(
+    "args",
+    [
+        (["string"]),
+        ([-1]),
+        ([0]),
+    ],
+)
+def test_validate_numeric_negative(args):
+    with pytest.raises(ValueError):
+        Square.validate_numeric(*args)
+
+@pytest.mark.parametrize(
+    "args",
+    [
+        ([3]),
+        ([3.5]),
+        ([1000]),
+    ],
+)
+def test_validate_numeric_positive(args):
+    try:
+        Square.validate_numeric(*args)
+    except ValueError:
+        pytest.fail("validate_numeric raised ValueError for valid inputs")

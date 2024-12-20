@@ -43,3 +43,29 @@ def test_can_create(side_a, side_b, side_c):
     assert side_a + side_b > side_c, "Triangle cannot be created"
     assert side_a + side_c > side_b, "Triangle cannot be created"
     assert side_b + side_c > side_a, "Triangle cannot be created"
+
+@pytest.mark.parametrize(
+    "args",
+    [
+        ([-1, 2, 3]),
+        ([1, 0, 3]),
+        ([1, "string", 3]),
+    ],
+)
+def test_validate_numeric_negative(args):
+    with pytest.raises(ValueError):
+        Triangle.validate_numeric(*args)
+
+@pytest.mark.parametrize(
+    "args",
+    [
+        ([1, 2, 3]),
+        ([1.5, 2.5, 3.5]),
+        ([100.5, 99, 1000]),
+    ],
+)
+def test_validate_numeric_positive(args):
+    try:
+        Triangle.validate_numeric(*args)
+    except ValueError:
+        pytest.fail("validate_numeric raised ValueError for valid inputs")
