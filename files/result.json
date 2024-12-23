@@ -1,0 +1,408 @@
+[
+    {
+        "name": "Lolita Lynn",
+        "gender": "female",
+        "age": 34,
+        "books": [
+            "Fundamentals of Wavelets",
+            "Data Smart",
+            "God Created the Integers",
+            "Superfreakonomics",
+            "Orientalism",
+            "Nature of Statistical Learning Theory, The",
+            "Integration of the Indian States",
+            "Drunkard's Walk, The"
+        ]
+    },
+    {
+        "name": "Tonia Hurst",
+        "gender": "female",
+        "age": 31,
+        "books": [
+            "Image Processing & Mathematical Morphology",
+            "How to Think Like Sherlock Holmes",
+            "Data Scientists at Work",
+            "Slaughterhouse Five",
+            "Birth of a Theorem",
+            "Structure & Interpretation of Computer Programs",
+            "Age of Wrath, The",
+            "Trial, The"
+        ]
+    },
+    {
+        "name": "Brooks Bright",
+        "gender": "male",
+        "age": 39,
+        "books": [
+            "Statistical Decision Theory'",
+            "Data Mining Handbook",
+            "New Machiavelli, The",
+            "Physics & Philosophy",
+            "Making Software",
+            "Analysis, Vol I",
+            "Machine Learning for Hackers",
+            "Signal and the Noise, The"
+        ]
+    },
+    {
+        "name": "Kathrine Sharp",
+        "gender": "female",
+        "age": 40,
+        "books": [
+            "Python for Data Analysis",
+            "Introduction to Algorithms",
+            "Beautiful and the Damned, The",
+            "Outsider, The",
+            "Complete Sherlock Holmes, The - Vol I",
+            "Complete Sherlock Holmes, The - Vol II",
+            "Wealth of Nations, The",
+            "Pillars of the Earth, The"
+        ]
+    },
+    {
+        "name": "Shawn Harrell",
+        "gender": "female",
+        "age": 34,
+        "books": [
+            "Tao of Physics, The",
+            "Surely You're Joking Mr Feynman",
+            "Farewell to Arms, A",
+            "Veteran, The",
+            "False Impressions",
+            "Last Lecture, The",
+            "Return of the Primitive",
+            "Jurassic Park"
+        ]
+    },
+    {
+        "name": "Amy Casey",
+        "gender": "female",
+        "age": 31,
+        "books": [
+            "Russian Journal, A",
+            "Tales of Mystery and Imagination",
+            "Freakonomics",
+            "Hidden Connections, The",
+            "Story of Philosophy, The",
+            "Asami Asami",
+            "Journal of a Novel",
+            "Once There Was a War"
+        ]
+    },
+    {
+        "name": "Lorena Mejia",
+        "gender": "female",
+        "age": 24,
+        "books": [
+            "Moon is Down, The",
+            "Brethren, The",
+            "In a Free State",
+            "Catch 22",
+            "Complete Mastermind, The",
+            "Dylan on Dylan",
+            "Soft Computing & Intelligent Systems",
+            "Textbook of Economic Theory"
+        ]
+    },
+    {
+        "name": "Allyson Wilkins",
+        "gender": "female",
+        "age": 29,
+        "books": [
+            "Econometric Analysis",
+            "Learning OpenCV",
+            "Data Structures Using C & C++",
+            "Computer Vision, A Modern Approach",
+            "Principles of Communication Systems",
+            "Let Us C",
+            "Amulet of Samarkand, The",
+            "Crime and Punishment"
+        ]
+    },
+    {
+        "name": "Mays Reed",
+        "gender": "male",
+        "age": 38,
+        "books": [
+            "Angels & Demons",
+            "Argumentative Indian, The",
+            "Sea of Poppies",
+            "Idea of Justice, The",
+            "Raisin in the Sun, A",
+            "All the President's Men",
+            "Prisoner of Birth, A",
+            "Scoop!"
+        ]
+    },
+    {
+        "name": "Katherine Mayer",
+        "gender": "female",
+        "age": 27,
+        "books": [
+            "Ahe Manohar Tari",
+            "Last Mughal, The",
+            "Social Choice & Welfare, Vol 39 No. 1",
+            "Radiowaril Bhashane & Shrutika",
+            "Gun Gayin Awadi",
+            "Aghal Paghal",
+            "Maqta-e-Ghalib",
+            "Beyond Degrees"
+        ]
+    },
+    {
+        "name": "Kelly Byers",
+        "gender": "female",
+        "age": 35,
+        "books": [
+            "Manasa",
+            "India from Midnight to Milennium",
+            "World's Greatest Trials, The",
+            "Great Indian Novel, The",
+            "O Jerusalem!",
+            "City of Joy, The",
+            "Freedom at Midnight",
+            "Winter of Our Discontent, The"
+        ]
+    },
+    {
+        "name": "Schwartz Carey",
+        "gender": "male",
+        "age": 32,
+        "books": [
+            "On Education",
+            "Free Will",
+            "Bookless in Baghdad",
+            "Case of the Lame Canary, The",
+            "Theory of Everything, The",
+            "New Markets & Other Essays",
+            "Electric Universe",
+            "Hunchback of Notre Dame, The"
+        ]
+    },
+    {
+        "name": "Kay Beasley",
+        "gender": "female",
+        "age": 34,
+        "books": [
+            "Burning Bright",
+            "Age of Discontuinity, The",
+            "Doctor in the Nude",
+            "Down and Out in Paris & London",
+            "Identity & Violence",
+            "Beyond the Three Seas",
+            "World's Greatest Short Stories, The",
+            "Talking Straight"
+        ]
+    },
+    {
+        "name": "Robbins Gordon",
+        "gender": "male",
+        "age": 23,
+        "books": [
+            "Maugham's Collected Short Stories, Vol 3",
+            "Phantom of Manhattan, The",
+            "Ashenden of The British Agent",
+            "Zen & The Art of Motorcycle Maintenance",
+            "Great War for Civilization, The",
+            "We the Living",
+            "Artist and the Mathematician, The",
+            "History of Western Philosophy"
+        ]
+    },
+    {
+        "name": "Hillary Bauer",
+        "gender": "female",
+        "age": 39,
+        "books": [
+            "Selected Short Stories",
+            "Rationality & Freedom",
+            "Clash of Civilizations and Remaking of the World Order",
+            "Uncommon Wisdom",
+            "One",
+            "Karl Marx Biography",
+            "To Sir With Love"
+        ]
+    },
+    {
+        "name": "Ruiz Phelps",
+        "gender": "male",
+        "age": 36,
+        "books": [
+            "Half A Life",
+            "Discovery of India, The",
+            "Apulki",
+            "Unpopular Essays",
+            "Deceiver, The",
+            "Veil: Secret Wars of the CIA",
+            "Char Shabda"
+        ]
+    },
+    {
+        "name": "Carolina Bryant",
+        "gender": "female",
+        "age": 31,
+        "books": [
+            "Rosy is My Relative",
+            "Moon and Sixpence, The",
+            "Political Philosophers",
+            "Short History of the World, A",
+            "Trembling of a Leaf, The",
+            "Doctor on the Brain",
+            "Simpsons & Their Mathematical Secrets"
+        ]
+    },
+    {
+        "name": "Sosa Lee",
+        "gender": "male",
+        "age": 31,
+        "books": [
+            "Pattern Classification",
+            "From Beirut to Jerusalem",
+            "Code Book, The",
+            "Age of the Warrior, The",
+            "Final Crisis",
+            "Killing Joke, The",
+            "Flashpoint"
+        ]
+    },
+    {
+        "name": "Lorna Scott",
+        "gender": "female",
+        "age": 24,
+        "books": [
+            "Batman Earth One",
+            "Crisis on Infinite Earths",
+            "Numbers Behind Numb3rs, The",
+            "Superman Earth One - 1",
+            "Superman Earth One - 2",
+            "Justice League: Throne of Atlantis",
+            "Justice League: The Villain's Journey"
+        ]
+    },
+    {
+        "name": "Bernard Holden",
+        "gender": "male",
+        "age": 32,
+        "books": [
+            "Death of Superman, The",
+            "History of the DC Universe",
+            "Batman: The Long Halloween",
+            "Life in Letters, A",
+            "Information, The",
+            "Journal of Economics, vol 106 No 3",
+            "Elements of Information Theory"
+        ]
+    },
+    {
+        "name": "Craft Shields",
+        "gender": "male",
+        "age": 31,
+        "books": [
+            "Power Electronics - Rashid",
+            "Power Electronics - Mohan",
+            "Neural Networks",
+            "Grapes of Wrath, The",
+            "Vyakti ani Valli",
+            "Statistical Learning Theory",
+            "Empire of the Mughal - The Tainted Throne"
+        ]
+    },
+    {
+        "name": "Mara English",
+        "gender": "female",
+        "age": 23,
+        "books": [
+            "Empire of the Mughal - Brothers at War",
+            "Empire of the Mughal - Ruler of the World",
+            "Empire of the Mughal - The Serpent's Tooth",
+            "Empire of the Mughal - Raiders from the North",
+            "Mossad",
+            "Jim Corbett Omnibus",
+            "20000 Leagues Under the Sea"
+        ]
+    },
+    {
+        "name": "Fisher Levy",
+        "gender": "male",
+        "age": 30,
+        "books": [
+            "Batatyachi Chal",
+            "Hafasavnuk",
+            "Urlasurla",
+            "Pointers in C",
+            "Cathedral and the Bazaar, The",
+            "Design with OpAmps",
+            "Think Complexity"
+        ]
+    },
+    {
+        "name": "Cecelia Snyder",
+        "gender": "female",
+        "age": 25,
+        "books": [
+            "Devil's Advocate, The",
+            "Ayn Rand Answers",
+            "Philosophy: Who Needs It",
+            "World's Great Thinkers, The",
+            "Data Analysis with Open Source Tools",
+            "Broca's Brain",
+            "Men of Mathematics"
+        ]
+    },
+    {
+        "name": "Nina Kaufman",
+        "gender": "female",
+        "age": 22,
+        "books": [
+            "Oxford book of Modern Science Writing",
+            "Justice, Judiciary and Democracy",
+            "Arthashastra, The",
+            "We the People",
+            "We the Nation",
+            "Courtroom Genius, The",
+            "Dongri to Dubai"
+        ]
+    },
+    {
+        "name": "Dillard Branch",
+        "gender": "male",
+        "age": 37,
+        "books": [
+            "History of England, Foundation",
+            "City of Djinns",
+            "India's Legal System",
+            "More Tears to Cry",
+            "Ropemaker, The",
+            "Angels & Demons",
+            "Judge, The"
+        ]
+    },
+    {
+        "name": "Dyer Bartlett",
+        "gender": "male",
+        "age": 33,
+        "books": [
+            "Attorney, The",
+            "Prince, The",
+            "Eyeless in Gaza",
+            "Tales of Beedle the Bard",
+            "Girl with the Dragon Tattoo",
+            "Girl who kicked the Hornet's Nest",
+            "Girl who played with Fire"
+        ]
+    },
+    {
+        "name": "Tyler Dotson",
+        "gender": "male",
+        "age": 20,
+        "books": [
+            "Batman Handbook",
+            "Murphy's Law",
+            "Structure and Randomness",
+            "Image Processing with MATLAB",
+            "Animal Farm",
+            "Idiot, The",
+            "Christmas Carol, A"
+        ]
+    }
+]
