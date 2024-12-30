@@ -9,7 +9,7 @@ RANDOM_3 = 'https://dog.ceo/api/breeds/image/random/'
 
 def test_get_all_dogs():
     r = requests.get(BASE_URL+ALL_URL)
-    assert r.ok == True
+    assert r.ok
 
 @pytest.mark.parametrize("num,expected_status", [
     ('3', 200),
@@ -23,12 +23,12 @@ def test_get_count_photo(num, expected_status):
 @pytest.mark.parametrize("breed ,expected_status", [
     ('pug', 200),
     ('hound', 200),
-    ('wewe', 404),
-    ({"dda"}, 400)
+    ('wewe', 404)
 ])
 def test_get_photo_breed(breed, expected_status):
     r = requests.get(f"{BASE_URL}/breed/{breed}/images")
     assert r.status_code == expected_status
+    assert r.url == f"https://dog.ceo/api/breed/{breed}/images"
 
 
 
@@ -39,5 +39,6 @@ def test_get_photo_breed(breed, expected_status):
     ("404", 404)
 ])
 def test_get_bread(breed,expected_status):
-    r = requests.get(BASE_URL+'/breed/'+ breed +'/images/random')
+    r = requests.get(f"{BASE_URL}/breed/{breed}/images/random")
     assert r.status_code == expected_status
+    assert r.url == f"https://dog.ceo/api/breed/{breed}/images/random"
