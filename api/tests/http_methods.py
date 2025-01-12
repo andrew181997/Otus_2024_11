@@ -4,17 +4,7 @@ import os
 
 class HttpMethods:
     """Базовый клас в котором описана логика отправки HTTP запросов"""
-    token = os.getenv("API_KEY")
-    headers = {'Authorization': f'Bearer 5gtzAWntym3oDFjBQTKP8Jb2WP-S3Thb',
-                'Content-Type': 'application/json',
-                'Accept': "application/json"}
-    BASE_URL = "https://api.gectaro.com/v1/"
-    project_id = '/106728'
-    company_id = '/7323'
-    resource_requests = '/resource-requests'
-    project = 'projects'
-    companies = 'companies'
-    id_for_task ='/10419041'
+
 
     @staticmethod
     def get(url: str, header: dict) -> requests.Response:

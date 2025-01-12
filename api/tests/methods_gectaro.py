@@ -1,30 +1,61 @@
 import pytest
 import requests
-from BaseCase import HttpMethods
+import os
+from http_methods import HttpMethods
 
-h = HttpMethods()
+token = os.getenv("API_KEY")
+headers = {'Authorization': f'Bearer 5gtzAWntym3oDFjBQTKP8Jb2WP-S3Thb',
+           'Content-Type': 'application/json',
+           'Accept': "application/json"}
+BASE_URL = "https://api.gectaro.com/v1/"
+project_id = '/106728'
+company_id = '/7323'
+resource_requests = '/resource-requests'
+project = 'projects'
+companies = 'companies'
+id_for_task = '/10419041'
 
-class TasksApi:
-    @staticmethod
-    def add_task_project():
+@pytest.fixture(autouse=False,scope="function")
+def set_up():
+    api = GectaroApi()
+    result= api.add_task_project()
+    data = result.json()
+    id = data.get("id")
+    yield id
+
+@pytest.fixture(scope="function")
+def delete_task():
+    """Фикстура для удаления заявки."""
+    def _delete_task(task_id):
+        """Удаляет заявку по ID, используя метод del_task."""
+        api = GectaroApi()  # Создаем экземпляр класса
+        result = api.del_task(task_id)
+        assert result.status_code == 204, f"Failed to delete task with ID {task_id}. Status: {result.status_code}"
+    return _delete_task
+
+
+class GectaroApi(HttpMethods):
+
+    def add_task_project(self, body=None):
         """Метод создания заявки в проекте"""
-        body = {
+        default_body = {
             'project_tasks_resource_id': 14119591,
-            'volume': 101,
+            'volume': 151515,
             'cost':100,
-            'needed_at': 1735134746,
+            'needed_at': 1734163804,
             'is_over_budget': 1
         }
-        result = HttpMethods.post(url=h.BASE_URL+h.project+h.project_id+h.resource_requests,header= h.headers, body=body)
-        data = result.json()
-        id = data.get("id")
-        return result.status_code, result.json(), id
+        self.body = body if body else default_body
+        result = HttpMethods.post(url=BASE_URL+project+project_id+resource_requests, header=headers, body=self.body)
+        # data = result.json()
+        # id = data.get("id")
+        return result
 
     @staticmethod
     def get_tasks_project():
         """Метод получения списка заявок в проекте"""
-        result = HttpMethods.get(url=h.BASE_URL+h.project+h.project_id+h.resource_requests,header= h.headers)
-        return result.status_code, result.json()
+        result = HttpMethods.get(url=BASE_URL+project+project_id+resource_requests, header=headers)
+        return result
 
     @staticmethod
     def add_task_company():
@@ -36,48 +67,39 @@ class TasksApi:
             'needed_at': 1735134746,
             'is_over_budget': 1
         }
-        result = HttpMethods.post(url=h.BASE_URL+h.companies+h.company_id+h.resource_requests,header= h.headers, body=body)
-        return result.status_code, result.json()
+        result = HttpMethods.post(url=BASE_URL+companies+company_id+resource_requests, header=headers, body=body)
+        return result
 
     @staticmethod
     def get_tasks_company():
         """Метод получения списка заявок в компании"""
-        result = HttpMethods.get(url=h.BASE_URL+h.companies+h.company_id+h.resource_requests,header= h.headers)
-        return result.status_code, result.json()
+        result = HttpMethods.get(url=BASE_URL+companies+company_id+resource_requests,header= headers)
+        return result
 
 
     def get_tasks_info(self,id):
         """Метод получения информации по заявке в проекте"""
-        result = HttpMethods.get(url=h.BASE_URL+h.project+h.project_id+h.resource_requests +id,header= h.headers)
-        return result.status_code, result.json(), result.url
+        result = HttpMethods.get(url=f"{BASE_URL}{project+project_id}{resource_requests}/{str(id)}",header= headers)
+        return result
 
-    @staticmethod
-    def del_task():
+
+    def del_task(self,id):
         """Метод удаления заявки в проекте"""
-        status, response , id = TasksApi.add_task_project()
-        id_task ='/'+str(id)
-        result = HttpMethods.delete(url=h.BASE_URL + h.project + h.project_id + h.resource_requests +id_task, header=h.headers)
-        if result.status_code == 204:
-            return  result.status_code, result.url
-        else:
-            ValueError(f'Error! {result.status_code}')
+        result = HttpMethods.delete(url=f"{BASE_URL}{project+project_id}{resource_requests}/{str(id)}", header=headers)
+        return result
 
-    @staticmethod
-    def edit_task():
+
+    def edit_task(self,id,body=None):
         """Метод изменения заявки в компании"""
-        status, response, id = TasksApi.add_task_project()
-        id_task = '/' + str(id)
-        body = {
+
+        default_body = {
             "project_tasks_resource_id": 14119591,
             "volume": 999,
             "cost": 9999,
             "needed_at": 1734250125,
             "created_at": 1735134746,
         }
-        result = HttpMethods.put(url=h.BASE_URL + h.project + h.project_id + h.resource_requests + id_task , body=body, header=h.headers)
-        if result.status_code == 200:
-            return  result.json(), result.url
-        else:
-            ValueError(f'Error! {result.status_code}')
+        self.body = body if body else default_body
+        result = HttpMethods.put(url=f"{BASE_URL}{project+project_id}{resource_requests}/{str(id)}", body=self.body, header=headers)
+        return result
 
-print(TasksApi.get_tasks_project())
